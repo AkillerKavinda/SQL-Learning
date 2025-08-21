@@ -7,7 +7,7 @@ select * from teachers;
 select s.student_name, e.exam_id, e.score
 from students s
 join examinations e
-on s.student_id = e.student_id;
+on s.student_id = e.student_id ;
 
 -- Left Join
 select s.student_name, e.exam_id
@@ -280,4 +280,5 @@ cross join subjects sub
 left join examinations e
 on s.student_id = e.student_id and sub.subject_id = e.subject_id
 group by s.student_id, s.student_name, sub.subject_name;
+
 
