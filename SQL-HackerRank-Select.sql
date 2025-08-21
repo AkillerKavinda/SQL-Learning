@@ -130,32 +130,6 @@ where salary > 2000
 and months < 10
 order by employee_id;
 
--- Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
 
-select sum(c.population)
-from city c
-join country coun
-on c.countrycode = coun.code
-where coun.continent = 'Asia';
-
--- Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
-
-select c.name
-from city c
-join country cn
-on c.countrycode = cn.code
-where cn.continent = 'Africa';
-
--- Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
-
-
-select cn.continent, floor(avg(c.population))
-from country cn
-join city c
-on c.countrycode = cn.code
-group by cn.continent;
-
--- Round - Rounds to the nearest decimal
--- Floor - Rounds to the integer below
 
 
